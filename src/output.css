@@ -2693,6 +2693,10 @@ input.active {
     width: 400px;
   }
 
+  .md\:flex-row{
+    flex-direction: row;
+  }
+
   .md\:place-self-end{
     place-self: end;
   }
