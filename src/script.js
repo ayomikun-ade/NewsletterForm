@@ -42,5 +42,5 @@ dismissBtn.addEventListener("click", () => {
   //   container.classList.add("flex");
   //   container.classList.remove("hidden");
   container.style.display = "flex";
-  confirmedMessage.classList.addEventListener("hidden");
+  confirmedMessage.classList.add("hidden");
 });
