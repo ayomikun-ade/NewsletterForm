@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <title>Newsletter Sign-up Form</title>
+  </head>
+  <body
+    class="font-[Roboto] text-base md:min-h-screen flex items-center justify-center"
+  >
+    <!-- Sign-up form start -->
+
+    <div id="container" class="bg-white h-screen md:rounded-3xl">
+      <div class="max-w-fit flex flex-col-reverse md:grid grid-cols-2 md:p-6">
+        <div
+          id="left"
+          class="left flex flex-col justify-center p-4 md:p-0 mt-4 md:mt-0 md:ml-6"
+        >
+          <div class="left-info">
+            <h1 class="text-5xl font-semibold mb-4">Stay updated!</h1>
+            <p class="mb-5">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="mb-4">
+              <li>Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>
+            </ul>
+          </div>
+          <form id="form">
+            <div class="form-item flex flex-col">
+              <label
+                for="email"
+                class="flex justify-between text-sm font-bold mb-3"
+              >
+                <p>Email address</p>
+                <p
+                  id="invalid-email"
+                  class="invalid-email text-rose-500 hidden"
+                >
+                  Valid email required
+                </p>
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="email@company.com"
+                class="p-4 mb-6 rounded-lg border"
+              />
+            </div>
+            <div class="form-item flex flex-col">
+              <button
+                id="submit-btn"
+                type="submit"
+                class="p-4 mb-4 rounded-lg text-white cursor-pointer font-bold outline-none border-none"
+              >
+                Subscribe to monthly newsletter
+              </button>
+            </div>
+          </form>
+        </div>
+        <div id="right" class="right md:place-self-end">
+          <picture class="w-full">
+            <source
+              media="(max-width:768px)"
+              srcset="./assets/images/illustration-sign-up-mobile.svg"
+            />
+            <img
+              src="assets/images/illustration-sign-up-desktop.svg"
+              alt=""
+              class="w-full"
+            />
+          </picture>
+        </div>
+      </div>
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+      <div
+        id="confirmed-message"
+        class="confirmed-message w-[400px] p-3 hidden"
+      >
+        <img src="assets/images/icon-success.svg" alt="" class="w-16" />
+        <h2 class="text-5xl font-[Roboto] font-semibold my-3">
+          Thanks for subscribing!
+        </h2>
+        <p class="my-6 mx-0">
+          A confirmation email has been sent to <span id="user-email"></span>.
+          Please open it and click the button inside to confirm your
+          subscription.
+        </p>
+        <button
+          id="dismiss-btn"
+          class="cursor-pointer text-white text-center w-full py-3 rounded-lg font-semibold text-lg"
+        >
+          Dismiss message
+        </button>
+      </div>
+      <!-- Success message end -->
+    </div>
+  </body>
+</html>
