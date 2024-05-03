@@ -7,15 +7,18 @@
     <title>Newsletter Sign-up Form</title>
   </head>
   <body
-    class="font-[Roboto] text-base md:min-h-screen flex items-center justify-center"
+    class="font-[Roboto] md:bg-[#36384e] text-base md:min-h-screen flex items-center justify-center"
   >
     <!-- Sign-up form start -->
 
-    <div id="container" class="bg-white h-screen md:rounded-3xl">
-      <div class="max-w-fit flex flex-col-reverse md:grid grid-cols-2 md:p-6">
+    <div id="container" class="bg-white md:rounded-3xl">
+      <div
+        id="main"
+        class="max-w-fit flex flex-col-reverse md:grid grid-cols-2 md:p-6"
+      >
         <div
           id="left"
-          class="left flex flex-col justify-center p-4 md:p-0 mt-4 md:mt-0 md:ml-6"
+          class="left flex flex-col justify-center p-4 md:p-0 mt-4 md:mt-0 md:mr-3 md:ml-6"
         >
           <div class="left-info">
             <h1 class="text-5xl font-semibold mb-4">Stay updated!</h1>
@@ -47,7 +50,7 @@
                 name="email"
                 id="email"
                 placeholder="email@company.com"
-                class="p-4 mb-6 rounded-lg border"
+                class="p-4 mb-6 rounded-lg border focus:border-2 focus:border-gray-600"
               />
             </div>
             <div class="form-item flex flex-col">
@@ -80,16 +83,16 @@
       <!-- Success message start -->
       <div
         id="confirmed-message"
-        class="confirmed-message w-[400px] p-3 hidden"
+        class="confirmed-message md:w-[400px] p-6 hidden"
       >
         <img src="assets/images/icon-success.svg" alt="" class="w-16" />
         <h2 class="text-5xl font-[Roboto] font-semibold my-3">
           Thanks for subscribing!
         </h2>
         <p class="my-6 mx-0">
-          A confirmation email has been sent to <span id="user-email"></span>.
-          Please open it and click the button inside to confirm your
-          subscription.
+          A confirmation email has been sent to
+          <span id="user-email" class="font-semibold"></span>. Please open it
+          and click the button inside to confirm your subscription.
         </p>
         <button
           id="dismiss-btn"
@@ -100,5 +103,7 @@
       </div>
       <!-- Success message end -->
     </div>
+
+    <script src="./src/script.js"></script>
   </body>
 </html>
